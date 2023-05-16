@@ -1,0 +1,18 @@
+﻿CREATE DATABASE testeHangfire
+GO
+
+USE testeHangfire
+GO
+
+/****** TABLES ******/
+
+IF OBJECT_ID(N'[Usuario]') IS NULL
+BEGIN
+	CREATE TABLE [dbo].[Usuario](
+		ID VARCHAR(36) PRIMARY KEY,
+        Nome NVARCHAR(100) NOT NULL,
+        Email NVARCHAR(100) NOT NULL,
+        Senha NVARCHAR(50) NOT NULL,
+        Status BIT NOT NULL
+    )
+END;
